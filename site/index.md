@@ -14,6 +14,6 @@ layout: page.njk
 <p class="details">Create <strong class="strong-1">rich branching multimedia stories</strong> with an open-source tool for your computer that’s <strong class="strong-2">simple</strong> and&nbsp;<strong class="strong-3">fun</strong>.</p>
 
 <ul id="actions">
-<li><a id="download-link" href="">Download</a> <span class="sr-only">– (</span><span id="release-info"></span><span class="sr-only">)</span></li>
+<li><a id="download-link" href="">Download</a> <span class="sr-only">– (</span><span id="release-info"></span><span class="sr-only">)</span><span id="terms">Read license</span></li>
 <li><a href="">Read the docs</a></li>
 </ul>
