@@ -1,9 +1,34 @@
 {% include "./_header.njk" %}
 
-<main>
-	<article class="container">
-	{{ content | safe }}
-	</article>
-</main>
+{% set pageHeadings = content | extractHeadings %}
+<div id="content" class="container">
+<aside id="pages-list">
+    {% if page.url.startsWith("/docs/") %}
+    {% include "./_page-nav.njk" %}
+    {% endif %}
+	</aside>
+  <main>
+    <article>
+      <h1>{{ title }}</h1>
+      {% if subtitle %}<p class="subtitle">{{ subtitle }}</p>{% endif %}
+      {{ content | safe }}
+      {% if page.url.startsWith("/docs/") %}
+      {% set adjacent = collections.docsFlatPages | docsAdjacentPages(page.url) %}
+      {% include "./_page-pagination.njk" %}
+      {% endif %}
+    </article>
+  </main>
+  <aside id="page-headings">
+  {% if pageHeadings.length %}
+    <nav>
+      <ol>
+        {% for heading in pageHeadings %}
+        <li><a href="#{{ heading.anchor }}">{{ heading.text }}</a></li>
+        {% endfor %}
+      </ol>
+    </nav>
+  {% endif %}
+  </aside>
+</div>
 
 {% include "./_footer.njk" %}

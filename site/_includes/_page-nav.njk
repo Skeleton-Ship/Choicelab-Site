@@ -1,0 +1,19 @@
+<nav>
+  <p class="page-list-heading"><a href="{{ collections.docsNav.root.url }}">{{ collections.docsNav.root.data.title }}</a></p>
+  <ol>
+    {% for item in collections.docsNav.sections %}
+    <li>
+      <a href="{{ item.section.url }}"{% if page.url == item.section.url %} class="current"{% endif %}>{{ item.section.data.title }}</a>
+      {% if item.pages.length %}
+      <ol>
+        {% for child in item.pages %}
+        <li>
+          <a href="{{ child.url }}"{% if page.url == child.url %} class="current"{% endif %}>{{ child.data.title }}</a>
+        </li>
+        {% endfor %}
+      </ol>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ol>
+</nav>

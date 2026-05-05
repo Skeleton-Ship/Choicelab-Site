@@ -1,6 +1,6 @@
 :root {
   /* grid */
-  --container-max-width: 1000px;
+  --container-max-width: 1300px;
   --container-padding: 3rem;
   --container-padding-sm: 1rem;
   /* typography */
@@ -175,7 +175,11 @@ article {
   }
 }
 
-body.home {
+/*
+ * Home page
+ */
+
+body#home {
   .details {
     font-family: var(--font-stack-headings);
     max-width: 470px;
@@ -219,5 +223,21 @@ body.home {
       line-height: 1.4;
       text-align: center;
     }
+  }
+}
+
+/* All other pages */
+
+#content {
+  display: flex;
+  #pages-list {
+    width: 300px;
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
+  #page-headings {
+    width: 200px;
+    flex-shrink: 0;
+    flex-grow: 0;
   }
 }

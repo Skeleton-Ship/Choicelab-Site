@@ -1,0 +1,18 @@
+<nav class="page-pagination">
+  <div class="pagination-prev">
+    {% if adjacent.prev %}
+    <a href="{{ adjacent.prev.url }}">
+      <span class="pagination-label">Previous</span>
+      <span class="pagination-title">{{ adjacent.prev.data.title }}</span>
+    </a>
+    {% endif %}
+  </div>
+  <div class="pagination-next">
+    {% if adjacent.next %}
+    <a href="{{ adjacent.next.url }}">
+      <span class="pagination-label">Next</span>
+      <span class="pagination-title">{{ adjacent.next.data.title }}</span>
+    </a>
+    {% endif %}
+  </div>
+</nav>

@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", () => {
+function getDownloadLink() {
+  if (document.body.getAttribute("id") !== "home") return;
   fetch("https://releases.choicelab.xyz/latest/latest.json", {
     method: "GET",
     mode: "cors",
@@ -22,4 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       info.innerText = `for macOS 14+\nv${data.version} – ${date}`;
     });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  getDownloadLink();
 });

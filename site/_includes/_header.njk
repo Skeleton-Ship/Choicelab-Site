@@ -1,53 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/_css/style.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/_css/style.css" />
     <!-- Title -->
     <title>
-      {% if class == "home" %} {{ title }} {% else %} {{ title }} – Choicelab {%
+      {% if id == "home" %} {{ title }} {% else %} {{ title }} – Choicelab {%
       endif %}
     </title>
-    <meta name="title" content="{{title}}">
-    <meta name="twitter:title" content="{{title}}">
-    <meta property="og:title" content="{{title}}">
+    <meta name="title" content="{{title}}" />
+    <meta name="twitter:title" content="{{title}}" />
+    <meta property="og:title" content="{{title}}" />
     <!-- Description -->
-    <meta name="description" content="{{ description }}">
-    <meta name="twitter:description" content="{{ description }}">
-    <meta property="og:description" content="{{ description }}">
+    <meta name="description" content="{{ description }}" />
+    <meta name="twitter:description" content="{{ description }}" />
+    <meta property="og:description" content="{{ description }}" />
     <!-- Image -->
-    <meta name="twitter:image" content="{{ socialImage }}">
-    <meta property="og:image" content="{{ socialImage }}">
+    <meta name="twitter:image" content="{{ socialImage }}" />
+    <meta property="og:image" content="{{ socialImage }}" />
     <!-- Favicon -->
     <link
       rel="icon"
       type="image/png"
       href="/_assets/favicon/favicon-32x32.png"
-      sizes="32x32">
+      sizes="32x32"
+    />
     <link
       rel="icon"
       type="image/png"
       href="/_assets/favicon/favicon-96x96.png"
-      sizes="96x96">
+      sizes="96x96"
+    />
     <link
       rel="icon"
       type="image/png"
       href="/_assets/favicon/favicon-192x192.png"
-      sizes="192x192">
+      sizes="192x192"
+    />
     <link
       rel="icon"
       type="image/png"
       href="/_assets/favicon/favicon-310x310.png"
-      sizes="310x310">
+      sizes="310x310"
+    />
   </head>
 
-  <body class="{{class}}">
+  <body id="{{id}}">
     <header id="site-header">
       <nav class="site-nav container">
-        <a class="title" href="/">Choicelab</a>
         <ul>
+          <li><a class="title" href="/">Choicelab</a></li>
+          {% if id == "home" %}
           <li><a href="/docs">Learn &amp; get help</a></li>
+          {% else %}
+          <ul>
+            <li><a href="/">Download</a></li>
+            <li><a href="/docs">Learn</a></li>
+            <li>
+              <a href="https://github.com/Skeleton-Ship/Choicelab">GitHub</a>
+            </li>
+          </ul>
+          {% endif %}
         </ul>
       </nav>
     </header>
+  </body>
+</html>
