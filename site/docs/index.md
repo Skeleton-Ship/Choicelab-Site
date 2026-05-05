@@ -1,6 +1,7 @@
 ---
 title: Welcome
 subtitle: Learn how Choicelab works and quickly become an expert
+index: 0
 ---
 
 If you've ever written (or just been interested in) interactive stories, there's a chance you've been introduced to tools like [Twine](https://twinery.org). Maybe there are other indie game development tools you've learned about, like [Bitsy](https://www.bitsy.org) or [Pixelorama](https://orama-interactive.itch.io/pixelorama).
