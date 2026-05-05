@@ -18,23 +18,26 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  --bg-gradient: linear-gradient(270deg, #192421 0%, #1b2a26 100%);
-  --header-color: #0b1614;
-  --text-heading-color: #b3facb;
-  --text-color: #fefff7;
-  --text-emphasis-color: #ffffff;
-  --text-label-color: #a8c6be;
-  --text-accent-color: #56e384;
-  --button-color: #51c176;
+  :root {
+    --bg-gradient: linear-gradient(165deg, #1b3330, #1b2e2c 30%);
+    --header-color: #0b1614;
+    --text-heading-color: #b3facb;
+    --text-color: #fefff7;
+    --text-emphasis-color: #ffffff;
+    --text-label-color: #a8c6be;
+    --text-accent-color: #56e384;
+    --button-color: #51c176;
+  }
 }
 
 html {
   font-size: clamp(16px, 2vw, 21px);
   text-size-adjust: none;
   -webkit-text-size-adjust: none;
-  width: 100%;
-  height: 100%;
   background: var(--bg-gradient);
+  min-height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 body {
