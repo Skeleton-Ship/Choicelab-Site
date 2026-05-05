@@ -1,6 +1,6 @@
 ---
 title: Basics
-subtitle: Learn how Choicelab works, including the basic functions of the editor.
+subtitle: Get started by understanding the editor and basic elements.
 index: 120
 ---
 
@@ -18,7 +18,7 @@ Choicelab's editor is built around an interactive **flowchart** that details wha
 
 [image: flowchart]
 
-Think of the flowchart as a tree. We start from the top of the tree, traversing downward _one node at a time_. When we reach a branch, Choicelab determines which stem to follow, from left to right, based on the _branching logic_ you create. When there are no more nodes or branches to traverse, the project ends.
+Think of the flowchart as a tree. We start from the top of the tree, traversing downward _one node at a time_. When we reach a branch, Choicelab determines which stem to follow, based on the logic you create (more on that later). When there are no more nodes or branches to traverse, the project ends.
 
 There are two kinds of nodes you can add to a Choicelab flowchart:
 
@@ -27,7 +27,7 @@ There are two kinds of nodes you can add to a Choicelab flowchart:
 
 [side by side image: cell, branch]
 
-These are the basic building blocks of a Choicelab project. While that's a small set, they can create surprisingly versatile and engaging multimedia stories.
+These are the basic building blocks of a Choicelab project. While a small set, they can create surprisingly rich and engaging multimedia stories.
 
 ## Inspector
 

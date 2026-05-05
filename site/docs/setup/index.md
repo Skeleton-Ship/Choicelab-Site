@@ -1,6 +1,6 @@
 ---
-title: Setting Up Choicelab
-subtitle: Learn how to download and install Choicelab, and the system requirements.
+title: Setup
+subtitle: Choicelab's system requirements, and how to download and install.
 index: 020
 ---
 
