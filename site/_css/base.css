@@ -8,24 +8,35 @@
   --font-stack-headings: "Hedvig Letters Serif", Georgia, system-ui, sans-serif;
   /* colors */
   --bg-gradient: linear-gradient(165deg, #e3f7f2, #ffffff 30%) no-repeat;
-  --header-color: #ffffff;
+  --divider-color: #405b56;
   --text-heading-color: #13a042;
   --text-color: #232828;
   --text-emphasis-color: #0a1212;
   --text-label-color: #4c5e56;
   --text-accent-color: #3cb765;
+  --text-link-color: #027452;
+  --text-link-decoration-color: #9df1d8;
+  --text-link-hover-color: #006043;
+  --text-link-hover-decoration-color: #64e0bb;
   --button-color: #51c176;
+  /* Elements */
+  --site-header-bg-color: #ffffff;
+  --site-header-padding: 1rem;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-gradient: linear-gradient(165deg, #1b3330, #1b2e2c 30%);
-    --header-color: #0b1614;
+    --bg-gradient: linear-gradient(165deg, #102522, #1b2e2c 60%);
+    --site-header-bg-color: #0b1614;
     --text-heading-color: #b3facb;
     --text-color: #fefff7;
     --text-emphasis-color: #ffffff;
     --text-label-color: #a8c6be;
     --text-accent-color: #56e384;
+    --text-link-color: #56e6bb;
+    --text-link-decoration-color: #047352;
+    --text-link-hover-color: #afffe7;
+    --text-link-hover-decoration-color: #058962;
     --button-color: #51c176;
   }
 }
@@ -43,6 +54,7 @@ html {
 body {
   color: var(--text-color);
   font-family: var(--font-stack-base);
+  font-weight: 380;
   min-width: 100%;
   min-height: 100%;
 }
@@ -78,7 +90,29 @@ body {
  * Article typography
  */
 
+a {
+  color: var(--text-link-color);
+  text-decoration-color: var(--text-link-decoration-color);
+  text-decoration-thickness: 3px;
+  transition: text-decoration-color 0.2s ease;
+  &:hover {
+    text-decoration-color: var(--text-link-hover-decoration-color);
+    color: var(--text-link-hover-color);
+  }
+}
+
 article {
+  header {
+    margin-bottom: 1.7rem;
+    h1 {
+      margin-bottom: 0.67rem;
+    }
+    .subtitle {
+      font-size: 1.2rem;
+      font-weight: 270;
+      color: var(--text-label-color);
+    }
+  }
   p,
   li {
     font-family: var(--font-stack-text);
@@ -95,9 +129,9 @@ article {
   h1 {
     font-family: var(--font-stack-headings);
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 2.2rem;
     line-height: 1.05;
-    margin-bottom: 2.5rem;
+    letter-spacing: -0.02em;
   }
   h2,
   h3,
@@ -110,7 +144,7 @@ article {
     margin-top: 2.5rem;
   }
   h2 {
-    font-size: 2.1rem;
+    font-size: 1.7rem;
     line-height: 1.2;
     letter-spacing: -0.01em;
     font-weight: 300;
@@ -155,13 +189,31 @@ article {
 }
 
 #site-header {
+  padding: var(--site-header-padding) 0;
   .title {
     font-family: var(--font-stack-headings);
     letter-spacing: -0.03em;
   }
+  .container > ul {
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+  }
+}
+
+body:not(#home) #site-header {
+  position: fixed;
+  width: 100%;
+  background-color: var(--site-header-bg-color);
+}
+
+body:not(#home) #content {
+  padding-top: calc(var(--site-header-padding) + 5rem);
 }
 
 #site-footer {
+  padding: 2rem 0;
   p,
   li {
     font-size: 0.75rem;
@@ -233,14 +285,49 @@ body#home {
 
 #content {
   display: flex;
+  margin-bottom: 3rem;
   #pages-list {
     width: 300px;
     flex-shrink: 0;
     flex-grow: 0;
+    > ol {
+      padding: 0;
+    }
+    li {
+      list-style: none;
+      margin-bottom: 0.5rem;
+      ol {
+        margin-top: 0.3rem;
+        padding-left: 1rem;
+      }
+    }
+    #pages-list-heading {
+      text-transform: uppercase;
+      font-size: 0.85em;
+      margin-bottom: 1rem;
+    }
+  }
+  hr {
+    width: 50%;
+    min-width: 300px;
+    margin: 3rem auto;
+    height: 1px;
+    background-color: var(--divider-color);
+    border: none;
+  }
+  .pagination-divider {
+    width: 100%;
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
   }
   #page-headings {
     width: 200px;
     flex-shrink: 0;
     flex-grow: 0;
+  }
+  #page-pagination {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
   }
 }

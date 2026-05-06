@@ -1,8 +1,10 @@
-<nav class="page-pagination">
+<nav id="page-pagination">
   <div class="pagination-prev">
     {% if adjacent.prev %}
     <a href="{{ adjacent.prev.url }}">
-      <span class="pagination-label">Previous</span>
+      <span class="pagination-label"
+        ><span class="sr-only">Previous</span>&laquo;</span
+      >
       <span class="pagination-title">{{ adjacent.prev.data.title }}</span>
     </a>
     {% endif %}
@@ -10,8 +12,9 @@
   <div class="pagination-next">
     {% if adjacent.next %}
     <a href="{{ adjacent.next.url }}">
-      <span class="pagination-label">Next</span>
+      <span class="pagination-label"><span class="sr-only">Next</span></span>
       <span class="pagination-title">{{ adjacent.next.data.title }}</span>
+      &raquo;
     </a>
     {% endif %}
   </div>

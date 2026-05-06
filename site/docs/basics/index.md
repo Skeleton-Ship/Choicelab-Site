@@ -4,7 +4,7 @@ subtitle: Get started by understanding the editor and basic elements.
 index: 120
 ---
 
-Choicelab always starts with the _launcher_, which gives you the simple choice of creating a new project, or opening an existing one.
+Choicelab always starts with the _launcher_, which lets you create a new project or open an existing one.
 
 [image: launcher]
 

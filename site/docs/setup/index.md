@@ -1,10 +1,10 @@
 ---
 title: Setup
-subtitle: Choicelab's system requirements, and how to download and install.
+subtitle: Choicelab's requirements, and how to download and install.
 index: 020
 ---
 
-## System requirements
+## What you'll need
 
 To use Choicelab, you'll need either:
 
@@ -15,10 +15,14 @@ To use Choicelab, you'll need either:
 	<p>Choicelab isn't supported on touch devices like iPhones or iPads.</p>
 </aside>
 
-While other apps aren't strictly required to use Choicelab, you may find it useful to also have:
+### Audio & video apps
 
-- An audio editor, such as GarageBand (Mac) or Audacity (cross-platform)
-- A video editor, like iMovie (Mac) or DaVinci Resolve (cross-platform)
+If you're planning to work with media in Choicelab, you will likely find it useful to have:
+
+- An audio editor, such as [Audacity](https://www.audacityteam.org) (cross-platform, free)
+- A video editor, such as [iMovie](https://www.apple.com/imovie/index.html) (for Mac, free) or [DaVinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve) (cross-platform, free)
+
+These apps will let you edit media files to look and sound the way you want them, before you export and slot in Choicelab.
 
 ## Download & install
 
