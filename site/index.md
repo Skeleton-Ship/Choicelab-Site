@@ -14,6 +14,13 @@ layout: home.njk
 <p class="details">Create <strong class="strong-1">rich branching multimedia stories</strong> with an open-source tool for your computer that’s <strong class="strong-2">simple</strong> and&nbsp;<strong class="strong-3">fun</strong>.</p>
 
 <ul id="actions">
-<li><a id="download-link" href="">Download</a> <span class="sr-only">– (</span><span id="release-info"></span><span class="sr-only">)</span><span id="terms"><a href="/license">See license</a></span></li>
+<li id="download-options">
+  <ul id="download-links">
+    <li><a id="download-mac" href="">macOS (Universal)</a></li>
+    <li><a id="download-win-x64" href="">Windows (x64)</a></li>
+    <li><a id="download-win-arm" href="">Windows (ARM64)</a></li>
+  </ul>
+  <span class="sr-only">(</span><span id="release-info"></span><span class="sr-only">)</span><span id="terms"><a href="/license">See license</a></span>
+</li>
 <li><a href="/docs">Read the docs</a></li>
 </ul>

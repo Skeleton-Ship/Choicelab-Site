@@ -293,6 +293,11 @@ body#home {
     width: 40vw;
     margin: 0 auto;
   }
+  #download-links[data-os="mac"] li:not(:first-child),
+  #download-links[data-os="windows"] li:first-child {
+    opacity: 0.45;
+    font-size: 0.85em;
+  }
   #actions {
     display: flex;
     padding: 0;
