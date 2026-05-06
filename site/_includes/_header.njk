@@ -48,6 +48,7 @@
 
   <body id="{{id}}">
     <header id="site-header">
+		<div>
       <nav class="site-nav container">
         <ul>
           <li>
@@ -69,4 +70,8 @@
           {% endif %}
         </ul>
       </nav>
+		</div>
+		{% if id !== "home" %}
+		{% include "./_header-shadow.njk" %}
+		{% endif %}
     </header>
