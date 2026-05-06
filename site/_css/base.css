@@ -192,7 +192,17 @@ article {
   padding: var(--site-header-padding) 0;
   .title {
     font-family: var(--font-stack-headings);
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
     letter-spacing: -0.03em;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    .app-icon {
+      width: 2rem;
+      height: 2rem;
+    }
   }
   .container > ul {
     width: 100%;
@@ -209,7 +219,7 @@ body:not(#home) #site-header {
 }
 
 body:not(#home) #content {
-  padding-top: calc(var(--site-header-padding) + 5rem);
+  padding-top: calc(var(--site-header-padding) + 5.5rem);
 }
 
 #site-footer {
@@ -245,7 +255,7 @@ body#home {
     strong {
       font-family: var(--font-stack-base);
       &.strong-1 {
-        color: #3cb765;
+        color: #49b66e;
       }
       &.strong-2 {
         color: #dbac00;

@@ -50,7 +50,12 @@
     <header id="site-header">
       <nav class="site-nav container">
         <ul>
-          <li><a class="title" href="/">Choicelab</a></li>
+          <li>
+			  <a class="title" href="/">
+				  <img class="app-icon" src="/_assets/app-icon.png" aria-hidden="true">
+				  <span>Choicelab</span>
+			  </a>
+		  </li>
           {% if id == "home" %}
           <li><a href="/docs">Learn &amp; get help</a></li>
           {% else %}
@@ -65,5 +70,3 @@
         </ul>
       </nav>
     </header>
-  </body>
-</html>
