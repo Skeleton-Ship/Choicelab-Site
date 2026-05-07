@@ -17,7 +17,7 @@ Left, toward the river: turn to page 110
 
 Many wonderful stories have been told with simple pathing like this. But there's an important limitation to this approach: once you turn to a specific page, the book isn't—cannot be—aware of _where you jumped from_. It has no memory of the reader's choice.
 
-That sounds trivial, but think about it: what if you could remember a choice at the beginning of the story, and use it to inform the ending? What if you could determine the direction of a plot arc not off of a single decision, but many of them at once?
+That sounds trivial, but think about it: what if you could remember a choice at the beginning of the narrative, and use it to inform the ending? What if you could determine the direction of a plot arc not off of a single decision, but many of them at once?
 
 **Variables** allow us to do that. A variable is nothing more than a little piece of memory that your project holds on to. You might have a variable that stores whether Evan and Naomi chose `straightOrLeft`, if they started their adventure `inTheMorning`, or whether they decided to ford the river or swim when they made their decision on that `riverCrossing`.
 

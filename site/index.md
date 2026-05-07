@@ -1,5 +1,5 @@
 ---
-title: Choicelab – Create branching multimedia stories
+title: Choicelab – Create multimedia-rich interactive narratives
 description: An easy-to-use app for writers and multimedia designers.
 id: home
 layout: home.njk
@@ -11,7 +11,7 @@ layout: home.njk
 
 <h1 class="sr-only">Choicelab</h1>
 
-<p class="details">Create <strong class="strong-1">rich branching multimedia stories</strong> with an open-source tool for your computer that’s <strong class="strong-2">simple</strong> and&nbsp;<strong class="strong-3">fun</strong>.</p>
+<p class="details">Create <strong class="strong-1">multimedia-rich interactive narratives</strong> with an open-source tool for your computer that’s <strong class="strong-2">simple</strong> and&nbsp;<strong class="strong-3">fun</strong>.</p>
 
 <ul id="actions">
 <li id="download-options">

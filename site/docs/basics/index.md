@@ -10,7 +10,7 @@ Choicelab always starts with the _launcher_, which lets you create a new project
 
 Like a lot of creative software, working in Choicelab involves creating and editing a _project_. When you create a new project, Choicelab makes a folder for you that has the project file (`.clx`) and an Assets folder.
 
-The project file contains all of your story's content, logic, and references to assets like video or audio files. As you add this media to your project, Choicelab automatically adds these files to the Assets folder and keeps it organized.
+The project file contains all of your content, logic, and references to assets like video or audio files. As you add this media to your project, Choicelab automatically adds these files to the Assets folder and keeps it organized.
 
 ## Flowchart
 
@@ -27,7 +27,7 @@ There are two kinds of nodes you can add to a Choicelab flowchart:
 
 [side by side image: cell, branch]
 
-These are the basic building blocks of a Choicelab project. While a small set, they can create surprisingly rich and engaging multimedia stories.
+These are the basic building blocks of a Choicelab project. While a small set, they can create surprisingly rich and engaging multimedia narratives.
 
 ## Inspector
 
@@ -64,4 +64,4 @@ When evaluating which branch stem to follow, Choicelab reads branches from left 
 
 ---
 
-By this point, you may be wondering: what exactly makes branch stems function? How do you write the paths in a story so Choicelab will follow them? That's where _conditional logic_ comes into the picture.
+By this point, you may be wondering: what exactly makes branch stems function? How do you write the paths in a narrative so Choicelab will follow them? That's where _conditional logic_ comes into the picture.
