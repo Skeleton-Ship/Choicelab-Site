@@ -23,8 +23,9 @@ const targets = [
   },
 ];
 
-function createDownloadEl(target, asset) {
+function createDownloadEl(target, asset, isCurrentOS = false) {
   const el = document.createElement("li");
+  if (isCurrentOS) el.setAttribute("data-is-current-os", "true");
   const a = document.createElement("a");
   a.setAttribute("href", asset.browser_download_url);
   a.innerText = target.text;
@@ -45,7 +46,7 @@ function getDownloadLink() {
         if (os !== target.os) return;
         const asset = data.assets.find((a) => target.match(a.name));
         if (!asset) return;
-        downloadEls.push(createDownloadEl(target, asset));
+        downloadEls.push(createDownloadEl(target, asset, true));
       });
 
       /* Find non-current-OS target(s) */

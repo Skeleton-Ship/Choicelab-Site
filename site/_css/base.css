@@ -296,7 +296,7 @@ body#home {
   }
   #download-links {
     padding: 0;
-    li:not(:first-child) {
+    li:not([data-is-current-os="true"]) {
       font-weight: 200;
       font-size: 0.8em;
       margin-bottom: 0.35rem;
