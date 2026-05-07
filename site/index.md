@@ -16,9 +16,6 @@ layout: home.njk
 <ul id="actions">
 <li id="download-options">
   <ul id="download-links">
-    <li><a id="download-mac" href="">macOS (Universal)</a></li>
-    <li><a id="download-win-x64" href="">Windows (x64)</a></li>
-    <li><a id="download-win-arm" href="">Windows (ARM64)</a></li>
   </ul>
   <span class="sr-only">(</span><span id="release-info"></span><span class="sr-only">)</span><span id="terms"><a href="/license">See license</a></span>
 </li>

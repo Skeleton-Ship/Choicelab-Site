@@ -275,6 +275,7 @@ body#home {
     line-height: 1.25;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 2rem;
     strong {
       font-family: var(--font-stack-base);
       &.strong-1 {
@@ -293,10 +294,13 @@ body#home {
     width: 40vw;
     margin: 0 auto;
   }
-  #download-links[data-os="mac"] li:not(:first-child),
-  #download-links[data-os="windows"] li:first-child {
-    opacity: 0.45;
-    font-size: 0.85em;
+  #download-links {
+    padding: 0;
+    li:not(:first-child) {
+      font-weight: 200;
+      font-size: 0.8em;
+      margin-bottom: 0.35rem;
+    }
   }
   #actions {
     display: flex;

@@ -5,20 +5,32 @@ function getOS() {
   return null;
 }
 
-const DOWNLOAD_TARGETS = [
+const targets = [
   {
-    id: "download-mac",
+    os: "mac",
+    text: "Download for Mac",
     match: (name) => name.includes("universal") && name.endsWith(".dmg"),
   },
   {
-    id: "download-win-x64",
+    os: "windows",
+    text: "Download for Windows (Intel)",
     match: (name) => name.includes("x64") && name.endsWith(".exe"),
   },
   {
-    id: "download-win-arm",
-    match: (name) => name.includes("aarch64") && name.endsWith(".exe"),
+    os: "windows",
+    text: "Download for Windows (ARM64)",
+    match: (name) => name.includes("arm64") && name.endsWith(".exe"),
   },
 ];
+
+function createDownloadEl(target, asset) {
+  const el = document.createElement("li");
+  const a = document.createElement("a");
+  a.setAttribute("href", asset.browser_download_url);
+  a.innerText = target.text;
+  el.appendChild(a);
+  return el;
+}
 
 function getDownloadLink() {
   if (document.body.getAttribute("id") !== "home") return;
@@ -26,18 +38,29 @@ function getDownloadLink() {
     .then((response) => response.json())
     .then((data) => {
       const os = getOS();
-      if (os) {
-        document.getElementById("download-links").dataset.os = os;
-      }
+      const downloadEls = [];
 
-      for (const target of DOWNLOAD_TARGETS) {
+      /* Find current OS target(s) */
+      targets.forEach((target) => {
+        if (os !== target.os) return;
         const asset = data.assets.find((a) => target.match(a.name));
-        if (asset) {
-          document
-            .getElementById(target.id)
-            .setAttribute("href", asset.browser_download_url);
-        }
-      }
+        if (!asset) return;
+        downloadEls.push(createDownloadEl(target, asset));
+      });
+
+      /* Find non-current-OS target(s) */
+      targets.forEach((target) => {
+        if (os === target.os) return;
+        const asset = data.assets.find((a) => target.match(a.name));
+        if (!asset) return;
+        downloadEls.push(createDownloadEl(target, asset));
+      });
+
+      downloadEls.forEach((el) => {
+        document.getElementById("download-links")?.appendChild(el);
+      });
+
+      /* Set version and date */
       const info = document.getElementById("release-info");
       const date = new Date(data.published_at).toLocaleDateString("en-US", {
         month: "long",
