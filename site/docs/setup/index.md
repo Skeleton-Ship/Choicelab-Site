@@ -9,7 +9,7 @@ index: 020
 To use Choicelab, you'll need either:
 
 - A Mac running macOS 13.5 or higher
-- A PC running Windows 11, or Windows 10 version 22H2
+- A PC running Windows 11
 
 <aside class="warning">
 	<p>Choicelab isn't supported on touch devices like iPhones or iPads.</p>
