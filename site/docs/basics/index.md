@@ -22,7 +22,7 @@ Think of the flowchart as a tree. We start from the top of the tree, traversing 
 
 There are two kinds of nodes you can add to a Choicelab flowchart:
 
-- **Cells** do things on screen, and play media. You use a cell when you want to, say, show a line of text, provide the player with some button choices, or play a video (among other things).
+- **Cells** do things on screen, and play media. You use a cell when you want to, say, play a video, show a line of text, or provide the player with some button choices.
 - **Branches** change where the player goes in your project. You use a branch when you want to create paths the player may traverse based on their choices.
 
 [side by side image: cell, branch]
@@ -42,17 +42,9 @@ If you don't know what a variable is—or maybe kind of understand it, but find 
 
 A **cell** (always a solid rounded rectangle in the flowchart) does things by performing one or more _actions_ that you add to it. There are actions for showing onscreen text and input choices, as well as playing (and stopping) media.
 
-<aside>
-<p>Read more about [available actions](/docs/basics/actions.html) and how to use them.</p>
-</aside>
-
-A cell will play all actions inserted into it, and move on to the next node when all actions have _ended_. Some actions, like text, "end" as soon as they show up on screen. Others, like audio and video, are _timed_, and will end when they have finished playing through. Inputs — _interactive_ actions — will only end when the player has interacted with them in some way.
-
 [image: actions view]
 
-Note that an action "ending" doesn't necessarily mean it's removed from screen. Choicelab gives you control over when the screen clears. "Ending" just means it sends a signal to the cell that it's completed everything it needs to do.
-
-As an author, you generally want to write cells that have _at least one timed or interactive action_, something that doesn't end immediately. This is important: if there are no timed or interactive actions in a cell, it'll end as soon as it starts.
+A cell will play all actions inserted into it, and move on to the next node when all actions have played. We'll talk more about how these work in just a bit.
 
 ---
 
@@ -64,4 +56,4 @@ When evaluating which branch stem to follow, Choicelab reads branches from left 
 
 ---
 
-By this point, you may be wondering: what exactly makes branch stems function? How do you write the paths in a narrative so Choicelab will follow them? That's where _conditional logic_ comes into the picture.
+These are the two kinds of nodes in Choicelab. Let's take a look at both in more detail, starting with **cells**.

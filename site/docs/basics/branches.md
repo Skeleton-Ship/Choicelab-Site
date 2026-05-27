@@ -1,7 +1,7 @@
 ---
-title: Writing conditional logic
+title: Branches & conditional logic
 subtitle: Learn how to string together variables, branch stems, and rules to make your project interactive.
-index: 140
+index: 150
 ---
 
 If you've ever read an interactive fiction book, you might be familiar with how it works. At the end of the page, you're faced with a choice like:
@@ -23,9 +23,13 @@ That sounds trivial, but think about it: what if you could remember a choice at 
 
 All of the pathing in Choicelab is built off of variables, and writing opportunities for players to make choices that set variables to create _conditional logic_.
 
-## Kinds of variables
+## Creating and managing variables
 
-Choicelab supports three kinds of variables:
+Use the **Variables** pane to create and manage variables.
+
+[image: variables pane]
+
+There are three kinds:
 
 - String: A piece of text, typically a word or short sentence.
 - Boolean: A "binary" value that must always be either `true` or `false`.
@@ -51,4 +55,30 @@ A single rule can only evaluate one variable: _1 rule, 1 variable_. That said, a
 
 This set of tools—branch stems that contain one or more rules, each of which checks a single variable—lets you create relatively complex conditional logic. But, you may be wondering: how do you make an input button _set_ a variable?
 
-## Setting variables
+## Setting variables: bringing it all together
+
+When a player presses an input button, you can set it up so that the button press sets a variable with a specific value.
+
+[image: a single input button]
+
+So, you could have multiple input buttons that set different values for the same variable...
+
+[image: multiple input buttons in a grid]
+
+...and then create a branch with stems that check all of those different values to create paths:
+
+[image: branch with matching values]
+
+## Autofill variables and branch stems
+
+By this point, you might be saying to yourself: "Gee, that's a lot of fields I have to fill out." And Choicelab has a way of speeding things up for you: **Autofill**.
+
+If you've added input buttons to a cell but no variables set, and that cell is connected to a branch, Choicelab will offer to automatically create the variable names, values, and branch stems for you:
+
+[image: autofill menu item, autofill in cell settings]
+
+[image: before and after of cell + branch]
+
+<aside>
+	<p>Variable names and values are based on what you've written for the button labels. But if Choicelab gets it wrong, don't fret: you can update the names of the variables in the Variables pane, and your branches will update automatically.</p>
+</aside>

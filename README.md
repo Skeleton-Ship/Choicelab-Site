@@ -29,12 +29,12 @@ Each page's .md file specifies a layout, which corresponds to a layout file in t
 
 ## CSS
 
-Stylesheets are authored as regular CSS files, but with a twist: they're processed using [PostCSS](https://postcss.org), so you can use modern CSS features — like [variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) and [nesting](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting) — and they'll be polyfilled to older browsers.
+Stylesheets are authored as regular CSS files, but with a twist: they're processed using [PostCSS](https://postcss.org), so you can use modern CSS features—like [variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) and [nesting](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting)—and they'll be polyfilled to older browsers.
 
 CSS files can be found in the _/\_css_ folder.
 
 ## Build & deploy
 
-The Choicelab site has no backend — it's all frontend. As such, deploying to a server is easy: just run `bun build`, then serve the contents of the outputted _/dist_ folder.
+The Choicelab site has no backend—it's all frontend. As such, deploying to a server is easy: just run `bun build`, then serve the contents of the outputted _/dist_ folder.
 
 **Caveat**: The site must be hosted at the domain or subdomain root (e.g. example.com or subdomain.example.com). It can't be hosted at a subdirectory ( example.com/mysite).

@@ -24,6 +24,10 @@ If you're planning to work with media in Choicelab, you will likely find it usef
 
 These apps will let you edit media files to look and sound the way you want them, before you export and slot in Choicelab.
 
+<aside>
+<p>Looking for material to use in your project? <a href="https://pixabay.com/videos/">Pixabay</a>, <a href="https://www.pexels.com/videos/">Pexels</a>, <a href="https://mixkit.co">Mixkit</a>, and <a href="https://freesound.org">Freesound</a> offer free stock video and audio that's great for getting started.</p>
+</aside>
+
 ## Download & install
 
 You can download the latest version of Choicelab from [this site](/), or from Choicelab's [releases on GitHub](https://github.com/Skeleton-Ship/Choicelab/releases).
